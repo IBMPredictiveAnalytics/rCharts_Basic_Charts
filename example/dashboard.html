@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modeler Dashboard</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.4.min.js' type='text/javascript'></script>
+
+
+      <style>
+    body {
+      background-color: #BABABA;
+      }
+    .chart-stage{
+      background-color: #fff;
+      border-style: solid;
+      border-width: 2px;
+      border-color:grey;
+      margin:1em;
+    }
+
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+
+    .rChart {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+    }
+	#headerbar {
+		color:#fff;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
+		.chart-title {
+		   font-weight:bold;
+		}
+    .tooltip {
+        opacity: 1 !Important;
+    }
+    #bottom-row{
+      margin-top:2em;
+    }
+    </style>
+</head>
+
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id ="headerbar">
+  <h1>Modeler Dashboard</h1>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-12">
+          <div class="chart-title">
+            Plot 1 - Campaign Contributions by Employment Type (Top 100 Types by Contribution Amount)
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+      <div class="chart-wrapper">
+              <div class="chart-stage">
+
+             <div id = 'chart1ee82b686686' class = 'rChart dimple'></div>
+             <script type="text/javascript">
+           var opts = {
+          "dom": "chart1ee82b686686",
+         "width":   1000,
+         "height":    500,
+         "xAxis": {
+          "type": "addCategoryAxis",
+         "showPercent": false
+         },
+         "yAxis": {
+          "type": "addMeasureAxis",
+         "showPercent": false
+         },
+         "zAxis": [],
+         "colorAxis": [],
+         "defaultColors": [],
+         "layers": [],
+         "legend": {
+          "x":     60,
+         "y":     10,
+         "width":    700,
+         "height":     20,
+         "horizontalAlign": "left"
+         },
+         "x": "cand_nm",
+         "y": "contb_receipt_amt_Sum",
+         "groups": "contbr_occupation",
+         "type": "bar",
+         "id": "chart1ee82b686686"
+         },
+             data = [{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":9952058,"contbr_occupation":"ATTORNEY"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":8096797,"contbr_occupation":"RETIRED"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":6719725,"contbr_occupation":"RETIRED"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":5139358,"contbr_occupation":"NOT EMPLOYED"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":3885253,"contbr_occupation":"HOMEMAKER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2950793,"contbr_occupation":"CONSULTANT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2814161,"contbr_occupation":"LAWYER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2681974,"contbr_occupation":"CEO"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2377169,"contbr_occupation":""},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2281684,"contbr_occupation":"PRESIDENT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2195823,"contbr_occupation":"INFORMATION REQUESTED"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":2174870,"contbr_occupation":"INFORMATION REQUESTED PER BEST EFFORTS"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":2058252,"contbr_occupation":"PHYSICIAN"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":1827366,"contbr_occupation":"HOMEMAKER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":1410597,"contbr_occupation":"OWNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":1367947,"contbr_occupation":"EXECUTIVE"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":1313640,"contbr_occupation":"RETIRED"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":1090928,"contbr_occupation":"NOT EMPLOYED"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":1055309,"contbr_occupation":"ATTORNEY"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":976941,"contbr_occupation":"PROFESSOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":956957,"contbr_occupation":"STUDENT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":914041,"contbr_occupation":"PARTNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":864795,"contbr_occupation":"REAL ESTATE"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":844750,"contbr_occupation":"INFORMATION REQUESTED"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":744090,"contbr_occupation":"INVESTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":710879,"contbr_occupation":"WRITER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":688245,"contbr_occupation":"CEO"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":659078,"contbr_occupation":"OWNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":659020,"contbr_occupation":"MANAGER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":651556,"contbr_occupation":"TEACHER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":648559,"contbr_occupation":"PHYSICIAN"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":560667,"contbr_occupation":"VICE PRESIDENT"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":524733,"contbr_occupation":"PRESIDENT"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":514191,"contbr_occupation":"ATTORNEY"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":510691,"contbr_occupation":"PHYSICIAN"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":477697,"contbr_occupation":"DIRECTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":461176,"contbr_occupation":"ARTIST"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":457035,"contbr_occupation":"FINANCE"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":450555,"contbr_occupation":"ENGINEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":420370,"contbr_occupation":"CHAIRMAN"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":412678,"contbr_occupation":"ENGINEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":398196,"contbr_occupation":"EXECUTIVE DIRECTOR"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":390602,"contbr_occupation":"EXECUTIVE"},{"cand_nm":"Trump, Donald J.","contb_receipt_amt_Sum":384718,"contbr_occupation":"RETIRED"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":380383,"contbr_occupation":"SOFTWARE ENGINEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":362432,"contbr_occupation":"PRESIDENT & CEO"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":360741,"contbr_occupation":"ENTREPRENEUR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":359044,"contbr_occupation":"MANAGING DIRECTOR"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":357290,"contbr_occupation":"SALES"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":354224,"contbr_occupation":"INVESTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":352054,"contbr_occupation":"SALES"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":344916,"contbr_occupation":"REALTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":344573,"contbr_occupation":"ARCHITECT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":340167,"contbr_occupation":"BUSINESS OWNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":327294,"contbr_occupation":"BANKER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":323676,"contbr_occupation":"FOUNDER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":318180,"contbr_occupation":"REAL ESTATE"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":316048,"contbr_occupation":"PROFESSOR"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":316029,"contbr_occupation":"SELF EMPLOYED"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":315269,"contbr_occupation":"PRODUCER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":313380,"contbr_occupation":"PSYCHOLOGIST"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":313265,"contbr_occupation":"ENGINEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":306031,"contbr_occupation":"MARKETING"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":302767,"contbr_occupation":"PRINCIPAL"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":293334,"contbr_occupation":"DESIGNER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":286631,"contbr_occupation":"MANAGER"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":269577,"contbr_occupation":"TEACHER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":266868,"contbr_occupation":"BUSINESS OWNER"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":263131,"contbr_occupation":"CONSULTANT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":260643,"contbr_occupation":"VOLUNTEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":250054,"contbr_occupation":"CFO"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":248879,"contbr_occupation":"EDUCATOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":236374,"contbr_occupation":"MANAGING PARTNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":229222,"contbr_occupation":"PHILANTHROPIST"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":226781,"contbr_occupation":"ACCOUNTANT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":223634,"contbr_occupation":"INVESTMENTS"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":223567,"contbr_occupation":"ADMINISTRATOR"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":220766,"contbr_occupation":"NONE"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":220222,"contbr_occupation":"CPA"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":212510,"contbr_occupation":"LAWYER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":207151,"contbr_occupation":"REAL ESTATE DEVELOPER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":202782,"contbr_occupation":"SENIOR VICE PRESIDENT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":202113,"contbr_occupation":"BUSINESS"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":198554,"contbr_occupation":"SELF-EMPLOYED"},{"cand_nm":"Sanders, Bernard","contb_receipt_amt_Sum":191832,"contbr_occupation":"CONSULTANT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":189022,"contbr_occupation":"COO"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":188125,"contbr_occupation":"REAL ESTATE BROKER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":187468,"contbr_occupation":"PUBLIC RELATIONS"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":184819,"contbr_occupation":"EXECUTIVE VICE PRESIDENT"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":183344,"contbr_occupation":"ACTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":181281,"contbr_occupation":"VENTURE CAPITALIST"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":178793,"contbr_occupation":"COMMUNITY VOLUNTEER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":177573,"contbr_occupation":"INVESTMENT BANKER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":173051,"contbr_occupation":"CHAIRMAN & CEO"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":171877,"contbr_occupation":"FINANCIAL ADVISOR"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":170313,"contbr_occupation":"INVESTMENTS"},{"cand_nm":"Cruz, Rafael Edward 'Ted'","contb_receipt_amt_Sum":169263,"contbr_occupation":"NONE"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":167786,"contbr_occupation":"DOCTOR"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":166848,"contbr_occupation":"INTERIOR DESIGNER"},{"cand_nm":"Clinton, Hillary Rodham","contb_receipt_amt_Sum":163937,"contbr_occupation":"MANAGEMENT CONSULTANT"}];
+           var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+           var myChart = new dimple.chart(svg, data);
+           if (opts.bounds) {
+             myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+           }
+           //dimple allows use of custom CSS with noFormats
+           if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+           //for markimekko and addAxis also have third parameter measure
+           //so need to evaluate if measure provided
+
+           //function to build axes
+           function buildAxis(position,layer){
+             var axis;
+             var axisopts;
+             if (!layer[position+"Axis"]){
+               axisopts = opts[position+"Axis"];
+             } else axisopts = layer[position+"Axis"];
+
+             if(axisopts.measure) {
+               axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+             } else {
+               axis = myChart[axisopts.type](position, layer[position]);
+             };
+             if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+             if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+             if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);
+             if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+             if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+             if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+             if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;
+             return axis;
+           };
+
+           var c = null;
+           if(d3.keys(opts.colorAxis).length > 0) {
+             c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+           }
+
+           //allow manipulation of default colors to use with dimple
+           if(opts.defaultColors.length) {
+             opts.defaultColors = opts.defaultColors[0];
+             if (typeof(opts.defaultColors) == "function") {
+               //assume this is a d3 scale
+               //for now loop through first 20 but need a better way to handle
+               defaultColorsArray = [];
+               for (var n=0;n<20;n++) {
+                 defaultColorsArray.push(opts.defaultColors(n));
+               };
+               opts.defaultColors = defaultColorsArray;
+             }
+             opts.defaultColors.forEach(function(d,i) {
+               opts.defaultColors[i] = new dimple.color(d);
+             })
+             myChart.defaultColors = opts.defaultColors;
+           }
+
+           //do series
+           //set up a function since same for each
+           //as of now we have x,y,groups,data,type in opts for primary layer
+           //and other layers reside in opts.layers
+           function buildSeries(layer, hidden){
+             //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+             if (!layer.xAxis) layer.xAxis = opts.xAxis;
+             if (!layer.yAxis) layer.yAxis = opts.yAxis;
+             if (!layer.zAxis) layer.zAxis = opts.zAxis;
+
+             var x = buildAxis("x", layer);
+             x.hidden = hidden;
+
+             var y = buildAxis("y", layer);
+             y.hidden = hidden;
+
+             //z for bubbles
+             var z = null;
+             if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+               z = buildAxis("z", layer);
+             };
+
+             //here think I need to evaluate group and if missing do null
+             //as the group argument
+             //if provided need to use groups from layer
+             var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+
+             //as of v1.1.4 dimple can use different dataset for each series
+             if(layer.data){
+               //convert to an array of objects
+               //avoid lodash for now
+               datakeys = d3.keys(layer.data)
+               layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+                 var tempobj = {}
+                 datakeys.forEach(function(key){
+                   tempobj[key] = layer.data[key][i]
+                 })
+                 return tempobj
+               })
+               s.data = layer.dataarray;
+             }
+
+             if(layer.hasOwnProperty("groups")) {
+               s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+               //series offers an aggregate method that we will also need to check if available
+               //options available are avg, count, max, min, sum
+               if (!(typeof(layer.aggregate) === 'undefined')) {
+                 s.aggregate = eval(layer.aggregate);
+               }
+               if (!(typeof(layer.lineWeight) === 'undefined')) {
+                 s.lineWeight = eval(layer.lineWeight);
+               }
+               if (!(typeof(layer.barGap) === 'undefined')) {
+                 s.barGap = eval(layer.barGap);
+               }
+             };
+             myChart.series.push(s);
+
+             /*placeholder fix domain of primary scale for new series data
+             //not working right now but something like this
+             //for now just use overrideMin and overrideMax from rCharts
+             for( var i = 0; i<2; i++) {
+               if (!myChart.axes[i].overrideMin) {
+                 myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+               }
+               if (!myChart.axes[i].overrideMax) {
+                 myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+               }
+               myChart.axes[i]._update();
+             }
+             */
+
+
+             return s;
+           };
+
+           buildSeries(opts, false);
+           if (opts.layers.length > 0) {
+             opts.layers.forEach(function(layer){
+               buildSeries(layer, true);
+             })
+           }
+           //unsure if this is best but if legend is provided (not empty) then evaluate
+           if(d3.keys(opts.legend).length > 0) {
+             var l =myChart.addLegend();
+             d3.keys(opts.legend).forEach(function(d){
+               l[d] = opts.legend[d];
+             });
+           }
+           //quick way to get this going but need to make this cleaner
+           if(opts.storyboard) {
+             myChart.setStoryboard(opts.storyboard);
+           };
+           myChart.draw();
+
+         </script>
+
+             <script></script>
+
+
+                </div>
+              </div>
+          </div>
+            <div class="col-sm-1"></div>
+       </div>
+
+      <div class='row' id ='bottom-row'>
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Plot 2 - Campaign Contributions by State
+              </div>
+              <div class="chart-stage">
+
+                <div id = 'chart382426f71cf6' class = 'rChart dimple'></div>
+          <script type="text/javascript">
+        var opts = {
+       "dom": "chart382426f71cf6",
+      "width":    600,
+      "height":    300,
+      "xAxis": {
+       "type": "addCategoryAxis",
+      "showPercent": false
+      },
+      "yAxis": {
+       "type": "addMeasureAxis",
+      "showPercent": false
+      },
+      "zAxis": [],
+      "colorAxis": [],
+      "defaultColors": [],
+      "layers": [],
+      "legend": {
+       "x":     60,
+      "y":     10,
+      "width":    700,
+      "height":     20,
+      "horizontalAlign": "left"
+      },
+      "x": "contbr_st",
+      "y": "contb_receipt_amt_Sum",
+      "groups": "cand_nm",
+      "type": "bar",
+      "id": "chart382426f71cf6"
+      },
+          data = [{"contbr_st":"CA","contb_receipt_amt_Sum":19616714,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"NY","contb_receipt_amt_Sum":18661556,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"TX","contb_receipt_amt_Sum":13991356,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"FL","contb_receipt_amt_Sum":5841770,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"TX","contb_receipt_amt_Sum":4964386,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"CA","contb_receipt_amt_Sum":4375436,"cand_nm":"Sanders, Bernard"},{"contbr_st":"DC","contb_receipt_amt_Sum":4344472,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"IL","contb_receipt_amt_Sum":3834717,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"MA","contb_receipt_amt_Sum":3565843,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"MD","contb_receipt_amt_Sum":3512079,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"VA","contb_receipt_amt_Sum":2994377,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"CA","contb_receipt_amt_Sum":2567548,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"NJ","contb_receipt_amt_Sum":2325928,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"PA","contb_receipt_amt_Sum":2259447,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"CO","contb_receipt_amt_Sum":2025152,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"NY","contb_receipt_amt_Sum":1643906,"cand_nm":"Sanders, Bernard"},{"contbr_st":"FL","contb_receipt_amt_Sum":1593568,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"CT","contb_receipt_amt_Sum":1577180,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"WA","contb_receipt_amt_Sum":1352235,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"MO","contb_receipt_amt_Sum":1277103,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"WA","contb_receipt_amt_Sum":1192150,"cand_nm":"Sanders, Bernard"},{"contbr_st":"NC","contb_receipt_amt_Sum":1168313,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"GA","contb_receipt_amt_Sum":1112275,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"MN","contb_receipt_amt_Sum":1077513,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"OH","contb_receipt_amt_Sum":1046318,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"MA","contb_receipt_amt_Sum":958145,"cand_nm":"Sanders, Bernard"},{"contbr_st":"MI","contb_receipt_amt_Sum":917690,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"TN","contb_receipt_amt_Sum":819427,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"NY","contb_receipt_amt_Sum":806769,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"VT","contb_receipt_amt_Sum":730470,"cand_nm":"Sanders, Bernard"},{"contbr_st":"IL","contb_receipt_amt_Sum":717622,"cand_nm":"Sanders, Bernard"},{"contbr_st":"FL","contb_receipt_amt_Sum":696437,"cand_nm":"Sanders, Bernard"},{"contbr_st":"OK","contb_receipt_amt_Sum":686489,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"TX","contb_receipt_amt_Sum":670066,"cand_nm":"Sanders, Bernard"},{"contbr_st":"AR","contb_receipt_amt_Sum":663758,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"VA","contb_receipt_amt_Sum":613393,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"AZ","contb_receipt_amt_Sum":610851,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"OR","contb_receipt_amt_Sum":593810,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"OR","contb_receipt_amt_Sum":583933,"cand_nm":"Sanders, Bernard"},{"contbr_st":"NV","contb_receipt_amt_Sum":579488,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"IN","contb_receipt_amt_Sum":579086,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"IL","contb_receipt_amt_Sum":572745,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"PA","contb_receipt_amt_Sum":560316,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"GA","contb_receipt_amt_Sum":522156,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"CO","contb_receipt_amt_Sum":479185,"cand_nm":"Sanders, Bernard"},{"contbr_st":"OH","contb_receipt_amt_Sum":474186,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"SC","contb_receipt_amt_Sum":469944,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"RI","contb_receipt_amt_Sum":466771,"cand_nm":"Clinton, Hillary Rodham"},{"contbr_st":"WA","contb_receipt_amt_Sum":462345,"cand_nm":"Cruz, Rafael Edward 'Ted'"},{"contbr_st":"NM","contb_receipt_amt_Sum":448732,"cand_nm":"Clinton, Hillary Rodham"}];
+        var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+        var myChart = new dimple.chart(svg, data);
+        if (opts.bounds) {
+          myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+        }
+        //dimple allows use of custom CSS with noFormats
+        if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+        //for markimekko and addAxis also have third parameter measure
+        //so need to evaluate if measure provided
+
+        //function to build axes
+        function buildAxis(position,layer){
+          var axis;
+          var axisopts;
+          if (!layer[position+"Axis"]){
+            axisopts = opts[position+"Axis"];
+          } else axisopts = layer[position+"Axis"];
+
+          if(axisopts.measure) {
+            axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+          } else {
+            axis = myChart[axisopts.type](position, layer[position]);
+          };
+          if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+          if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+          if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);
+          if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+          if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+          if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+          if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;
+          return axis;
+        };
+
+        var c = null;
+        if(d3.keys(opts.colorAxis).length > 0) {
+          c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+        }
+
+        //allow manipulation of default colors to use with dimple
+        if(opts.defaultColors.length) {
+          opts.defaultColors = opts.defaultColors[0];
+          if (typeof(opts.defaultColors) == "function") {
+            //assume this is a d3 scale
+            //for now loop through first 20 but need a better way to handle
+            defaultColorsArray = [];
+            for (var n=0;n<20;n++) {
+              defaultColorsArray.push(opts.defaultColors(n));
+            };
+            opts.defaultColors = defaultColorsArray;
+          }
+          opts.defaultColors.forEach(function(d,i) {
+            opts.defaultColors[i] = new dimple.color(d);
+          })
+          myChart.defaultColors = opts.defaultColors;
+        }
+
+        //do series
+        //set up a function since same for each
+        //as of now we have x,y,groups,data,type in opts for primary layer
+        //and other layers reside in opts.layers
+        function buildSeries(layer, hidden){
+          //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+          if (!layer.xAxis) layer.xAxis = opts.xAxis;
+          if (!layer.yAxis) layer.yAxis = opts.yAxis;
+          if (!layer.zAxis) layer.zAxis = opts.zAxis;
+
+          var x = buildAxis("x", layer);
+          x.hidden = hidden;
+
+          var y = buildAxis("y", layer);
+          y.hidden = hidden;
+
+          //z for bubbles
+          var z = null;
+          if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+            z = buildAxis("z", layer);
+          };
+
+          //here think I need to evaluate group and if missing do null
+          //as the group argument
+          //if provided need to use groups from layer
+          var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+
+          //as of v1.1.4 dimple can use different dataset for each series
+          if(layer.data){
+            //convert to an array of objects
+            //avoid lodash for now
+            datakeys = d3.keys(layer.data)
+            layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+              var tempobj = {}
+              datakeys.forEach(function(key){
+                tempobj[key] = layer.data[key][i]
+              })
+              return tempobj
+            })
+            s.data = layer.dataarray;
+          }
+
+          if(layer.hasOwnProperty("groups")) {
+            s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+            //series offers an aggregate method that we will also need to check if available
+            //options available are avg, count, max, min, sum
+            if (!(typeof(layer.aggregate) === 'undefined')) {
+              s.aggregate = eval(layer.aggregate);
+            }
+            if (!(typeof(layer.lineWeight) === 'undefined')) {
+              s.lineWeight = eval(layer.lineWeight);
+            }
+            if (!(typeof(layer.barGap) === 'undefined')) {
+              s.barGap = eval(layer.barGap);
+            }
+          };
+          myChart.series.push(s);
+
+          /*placeholder fix domain of primary scale for new series data
+          //not working right now but something like this
+          //for now just use overrideMin and overrideMax from rCharts
+          for( var i = 0; i<2; i++) {
+            if (!myChart.axes[i].overrideMin) {
+              myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+            }
+            if (!myChart.axes[i].overrideMax) {
+              myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+            }
+            myChart.axes[i]._update();
+          }
+          */
+
+
+          return s;
+        };
+
+        buildSeries(opts, false);
+        if (opts.layers.length > 0) {
+          opts.layers.forEach(function(layer){
+            buildSeries(layer, true);
+          })
+        }
+        //unsure if this is best but if legend is provided (not empty) then evaluate
+        if(d3.keys(opts.legend).length > 0) {
+          var l =myChart.addLegend();
+          d3.keys(opts.legend).forEach(function(d){
+            l[d] = opts.legend[d];
+          });
+        }
+        //quick way to get this going but need to make this cleaner
+        if(opts.storyboard) {
+          myChart.setStoryboard(opts.storyboard);
+        };
+        myChart.draw();
+
+      </script>
+
+          <script></script>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Plot 3 - Contributions Over 2015 by Month
+              </div>
+              <div class="chart-stage">
+                <div id = 'chart328c7dec6271' class = 'rChart polycharts'></div>
+                   <script type='text/javascript'>
+                   var chartParams = {
+                "dom": "chart328c7dec6271",
+               "width":    600,
+               "height":    300,
+               "layers": [
+                {
+                "x": "month_num",
+               "y": "contb_receipt_amt_Sum",
+               "data": {
+                "month_num": [ 1, 2, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12 ],
+               "contb_receipt_amt_Sum": [ 9079, 11220, 3439822, 12946086, 306536, 1691853, 11707035, 1381981, 1720420, 13620828, 53075, 3285655, 1453613, 228284, 7166973, 1356972, 1254328, 592095, 1706044, 6157853, 2228582, 135939, 10238932, 2809716, 4420847, 177474, 8957865, 2617135, 1917783, 111697, 9679726, 2007441, 3428154, 262186, 5084248, 13172104, 6436947 ],
+               "cand_nm": [ "Cruz, Rafael Edward 'Ted'", "Cruz, Rafael Edward 'Ted'", "Cruz, Rafael Edward 'Ted'", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Clinton, Hillary Rodham", "Trump, Donald J.", "Cruz, Rafael Edward 'Ted'", "Sanders, Bernard", "Trump, Donald J.", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Trump, Donald J.", "Sanders, Bernard", "Clinton, Hillary Rodham", "Cruz, Rafael Edward 'Ted'", "Trump, Donald J.", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Trump, Donald J.", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Trump, Donald J.", "Clinton, Hillary Rodham", "Sanders, Bernard", "Cruz, Rafael Edward 'Ted'", "Trump, Donald J.", "Sanders, Bernard", "Clinton, Hillary Rodham", "Cruz, Rafael Edward 'Ted'" ]
+               },
+               "facet": null,
+               "color": "cand_nm",
+               "type": "line"
+               }
+               ],
+               "facet": [],
+               "guides": {
+                "x": {
+                "min":      0,
+               "max":     12
+               },
+               "y": {
+                "min":      0,
+               "max": 1.4e+07
+               }
+               },
+               "coord": [],
+               "id": "chart328c7dec6271"
+               }
+                   _.each(chartParams.layers, function(el){
+                       el.data = polyjs.data(el.data)
+                   })
+                   var graph_chart328c7dec6271 = polyjs.chart(chartParams);
+               </script>
+
+                   <script></script>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        function updateWindow(){
+            x = w.innerWidth || e.clientWidth || g.clientWidth;
+            y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+            svg.attr("width", x).attr("height", y);
+        }
+        alert(x);
+        window.onresize = updateWindow;
+        </script>
+
+
+  <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

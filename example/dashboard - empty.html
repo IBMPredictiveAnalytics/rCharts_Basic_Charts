@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modeler Dashboard</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.4.min.js' type='text/javascript'></script>
+
+
+      <style>
+    body {
+      background-color: #BABABA;
+      }
+    .chart-stage{
+      background-color: #fff;
+      border-style: solid;
+      border-width: 2px;
+      border-color:grey;
+      margin:1em;
+    }
+
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+
+    .rChart {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+    }
+	#headerbar {
+		color:#fff;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
+		.chart-title {
+		   font-weight:bold;
+		}
+    .tooltip {
+        opacity: 1 !Important;
+    }
+    #bottom-row{
+      margin-top:2em;
+    }
+    </style>
+</head>
+
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id ="headerbar">
+  <h1>Modeler Dashboard</h1>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-12">
+          <div class="chart-title">
+            Plot 1 - Campaign Contributions by Employment Type (Top 100 Types by Contribution Amount)
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+      <div class="chart-wrapper">
+                <div class="chart-stage">
+<!-- Enter Plot 1 here -->
+ Plot 1 Placeholder
+
+                </div>
+              </div>
+          </div>
+            <div class="col-sm-1"></div>
+       </div>
+
+      <div class='row' id ='bottom-row'>
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Plot 2 - Campaign Contributions by State
+              </div>
+              <div class="chart-stage">
+
+                <!-- Enter Plot 2 here -->
+                 Plot 2 Placeholder
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Plot 3 - Contributions Over 2015 by Month
+              </div>
+              <div class="chart-stage">
+                <!-- Enter Plot 3 here -->
+                 Plot 3 Placeholder
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        function updateWindow(){
+            x = w.innerWidth || e.clientWidth || g.clientWidth;
+            y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+            svg.attr("width", x).attr("height", y);
+        }
+        alert(x);
+        window.onresize = updateWindow;
+        </script>
+
+
+  <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
