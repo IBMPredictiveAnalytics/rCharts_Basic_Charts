@@ -67,7 +67,7 @@ Contributors
 ----
 
   - Greg Filla ([gdfilla](https://twitter.com/gdfilla))
-
+  - Armand Ruiz ([armand_ruiz](https://twitter.com/armand_ruiz))
 
 [1]: http://www.apache.org/licenses/LICENSE-2.0.html
 [2]: https://github.com/IBMPredictiveAnalytics/rCharts_Basic_Charts/tree/master/docs
